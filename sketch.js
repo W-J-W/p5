@@ -23,8 +23,8 @@ function setup() {
     // Top plane
     planes[3] = new Plane(createVector(0, 0, 0), createVector(1, 0, 0), createVector(0, 0, 1));
 
-    // Red circle (black border)
-    rings[0] = new Ring(150, 255, 0, 0, 300, 300);
+    // Orange circle (black border)
+    rings[0] = new Ring(150, 255, 90, 0, 300, 300);
     rings[0].setSpeed(-1, 0);
     // Yellow circle
     rings[1] = new Ring(80, 255, 255, 0, 300, 200);
@@ -61,9 +61,6 @@ function draw() {
             var angle = plane.angleToNormalVector(ring.speed);
             print('Angle between vector and normal vector', angle, '(', angle * 360 / 2 / Math.PI, ')');
 
-            document.getElementById(ringId + "_dst_from_" + planeId).innerHTML = Math.round(distance);
-            document.getElementById(ringId + "_angle_" + planeId).innerHTML = angle * 360 / 2 / Math.PI;
-
             if ( (plane.distanceOfPoint(currentCenterOfRing) > 0) && (angle > Math.PI / 2) ||
                  (plane.distanceOfPoint(currentCenterOfRing) < 0) && (angle < Math.PI / 2)   ) {
 
@@ -78,6 +75,8 @@ function draw() {
             }
 
             document.getElementById(ringId + "_speed").innerHTML = "(" + ring.speed.x + "/" + ring.speed.y + "/" + ring.speed.z + ")";
+            document.getElementById(ringId + "_dst_from_" + planeId).innerHTML = Math.round(distance);
+            document.getElementById(ringId + "_angle_" + planeId).innerHTML = Math.round(angle * 360 / 2 / Math.PI);
        })
     })
 

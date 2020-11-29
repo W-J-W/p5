@@ -4,6 +4,8 @@
 }
 
 .rings-grid {
+    font-family: Arial;
+    font-size: 20px;  
     display: grid;
     grid-template-columns: repeat(9, 1fr);
     grid-column-gap: 10px;
@@ -38,7 +40,7 @@
 .ring_0 {
     font-family: Arial;
     font-size: 20px;
-    background-color: rgba(255, 0, 0, 1.0);
+    background-color: rgb(255, 90, 0);
 }
 
 .ring_1 {

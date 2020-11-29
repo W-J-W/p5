@@ -1,0 +1,54 @@
+.time {
+    font-family: Arial;
+    font-size: 20px;  
+}
+
+.rings-grid {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-column-gap: 10px;
+    grid-column-gap: 10px;
+}
+
+.rings-grid-header-speed {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.rings-grid-header-right {
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+
+.rings-grid-header-bottom {
+    grid-column-start: 4;
+    grid-column-end: 6;
+}
+
+.rings-grid-header-left {
+    grid-column-start: 6;
+    grid-column-end: 8;
+}
+
+.rings-grid-header-top {
+    grid-column-start: 8;
+    grid-column-end: 10;
+}
+
+.ring_0 {
+    font-family: Arial;
+    font-size: 20px;
+    background-color: rgba(255, 0, 0, 1.0);
+}
+
+.ring_1 {
+    font-family: Arial;
+    font-size: 20px;
+    background-color: rgba(255, 255, 0, 1.0);
+}
+
+.ring_2 {
+    font-family: Arial;
+    font-size: 20px;
+    background-color: rgba(100, 255, 0, 1.0);
+}
